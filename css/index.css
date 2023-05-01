@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.header {
+    position: relative;
+    text-align: center;
+    background: linear-gradient(60deg, rgba(34, 79, 122, 0.677) 0%, white 100%);
+    color: white;
+    font-size: 25px;
+}
+.inner-header {
+    height: 40vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.inner-header>h1 {
+    line-height: 50vh;
+}
+.waves {
+    position: relative;
+    width: 100%;
+    height: 15vh;
+    margin-bottom: -7px;
+    /*Fix for safari gap*/
+    min-height: 100px;
+    max-height: 150px;
+}
+
+.content {
+    position: relative;
+    height: 20vh;
+    text-align: center;
+    background-color: white;
+}
+
+.content a {
+    margin: 0 5px;
+    font-size: 12px;
+    color: #333;
+}
+
+.content a:hover {
+    color: #000;
+}
+
+/* Animation */
+
+.parallax>use {
+    animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+
+.parallax>use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+}
+
+.parallax>use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+}
+
+.parallax>use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+}
+
+.parallax>use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+}
+
+@keyframes move-forever {
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
+}
+
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+    .waves {
+        height: 40px;
+        min-height: 40px;
+    }
+
+    .content {
+        height: 30vh;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+}
+.contact{
+    width: 1400px;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding-left: 90px;
+}
+/*实现蓝绿色的*/
+.box{
+    margin: 50px;
+    position:relative;
+    width: 550px;
+    height: 200px;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(34, 79, 122, 0.463);
+    background: white;
+    cursor: pointer;
+}
+.box:before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    z-index:-1;
+
+}
+.box:after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    /* background: #fff; */
+    background: rgba(34, 79, 122, 0.463);
+    z-index:-1;
+    filter:blur(40px);
+
+}
+.box:before,
+.box:after{
+    background: linear-gradient(235deg,rgba(31, 97, 159, 0.677),rgb(36, 46, 91),rgba(31, 97, 159, 0.677));
+}
+.biankuang{
+    padding:20px;
+    box-sizing:border-box;
+    /* color:#fff; */
+    color: rgba(34, 79, 122, 0.784);
+}

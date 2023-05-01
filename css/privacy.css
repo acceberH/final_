@@ -1,0 +1,189 @@
+
+*{
+    padding: 0;
+    margin: 0;
+}
+@font-face {
+    font-family: PostNoBillsJaff;
+    src: url('../images/PostNoBillsJaffna-Bold.ttf');
+  }
+.wrap {
+    width: 100vw;
+    height: 1700px;
+    position: relative;
+}
+
+.list {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding-left: 0px;
+}
+
+.item {
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    transition: all .8s;
+}
+
+.item img{
+    width: 100%;
+    height: 100%;
+}
+.content h1{
+    position: absolute;
+    top: 200px;
+    left: 300px;
+    z-index: 666;
+    color: white;
+}
+.item.active {
+    z-index: 10;
+    opacity: 1;
+}
+
+.btn {
+    width: 60px;
+    height: 100px;
+    z-index: 100;
+    top: 40vh;
+    position: absolute;
+    font-size: 30px;
+    color: rgba(8, 106, 115, 0.437);
+    background: #ffffff1b;
+    border: none;
+}
+.btn:hover{
+    color: rgba(8, 106, 115, 0.726);
+    background: #eeeeee92;
+}
+
+#leftBtn {
+    left: 0px;
+}
+
+#rightBtn {
+    right: 0px;
+}
+
+.pointList {
+    list-style: none;
+    padding-left: 0px;
+    position: absolute;
+    right: 6%;
+    top: 100px;
+    z-index: 200;
+}
+
+.point {
+    width: 50px;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+    float: left;
+    margin-right: 8px;
+    border: none;
+    cursor: pointer;  
+}
+
+.point.active{
+    background-color: rgb(90, 92, 92);
+}
+.back{
+    position: absolute;
+    z-index: 999;
+    text-decoration: none;
+    color: white;
+    font-size:30px;
+    top: 10px;
+    left: 20px;
+    display: block;
+    width: 100%;
+}
+
+.back:hover{
+    color: #eee;
+}
+.list li{
+    background: rgba(34, 79, 122, 0.677);
+    line-height: 100%;
+}
+.title{
+    width: 100%;
+    height: 100px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 100px;
+    color: white;
+    font-family: 'PostNoBillsJaff';
+    word-spacing: 10px;
+    letter-spacing: 7px;
+    font-size: 65px;
+    font-weight: bold;
+}
+.content{
+    width: 1000px;
+    height: 300px;
+    margin: 0 auto;
+    border: 10px solid rgb(251, 251, 251);
+    box-shadow: 0px 0px 20px 0px rgb(91, 89, 89);
+    position: relative;
+}
+.gai{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    background: rgba(50, 83, 97, 0.534);
+    top: 0;
+    left: 0;
+    display: none;
+}
+.content:hover .gai{
+    display: block;
+}
+.content:hover h1{
+    display: block;
+}
+.content:hover p{
+    display: block;
+}
+.content h1{
+    position: absolute;
+    left: 0;
+    top: 100px;
+    width: 100%;
+    text-align: center;
+    display: none;
+    font-size: 30px;
+    font-weight: 500;
+    font-family: 'Lucida Sans';
+}
+.content p{
+    position: absolute;
+    left: 0;
+    top: 150px;
+    width: 100%;
+    text-align: center;
+    display: none;
+    color: white;
+    font-size: 25px;
+}
+.text{
+    margin: 0 auto;
+    margin-top: 60px;
+    width: 1200px;
+    border: 5px solid white;
+    color: white;
+    padding: 30px;
+}
+.text p{
+    line-height: 30px;
+    margin-bottom: 15px;
+    text-indent: 2rem;
+    font-size: 20px;
+}
