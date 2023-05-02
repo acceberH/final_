@@ -1,14 +1,14 @@
 
-var items = document.querySelectorAll(".item");//图片
-var points = document.querySelectorAll(".point")//点
+var items = document.querySelectorAll(".item");
+var points = document.querySelectorAll(".point")
 var left = document.getElementById("leftBtn");
 var right = document.getElementById("rightBtn");
 var all = document.querySelector(".wrap")
 var index = 0;
-var time = 0;//定时器跳转参数初始化
+var time = 0;
 
 
-//清除active方法
+
 var clearActive = function () {
     for (i = 0; i < items.length; i++) {
         items[i].className = 'item';
@@ -18,13 +18,11 @@ var clearActive = function () {
     }
 }
 
-//改变active方法
 var goIndex = function () {
     clearActive();
     items[index].className = 'item active';
     points[index].className = 'point active'
 }
-//左按钮事件
 var goLeft = function () {
     if (index == 0) {
         index = 1;
@@ -34,7 +32,6 @@ var goLeft = function () {
     goIndex();
 }
 
-//右按钮事件
 var goRight = function () {
     if (index < 1) {
         index++;
@@ -45,15 +42,14 @@ var goRight = function () {
 }
 
 
-//绑定点击事件监听
 left.addEventListener('click', function () {
     goLeft();
-    time = 0;//计时器跳转清零
+    time = 0;
 })
 
 right.addEventListener('click', function () {
     goRight();
-    time = 0;//计时器跳转清零
+    time = 0;
 })
 
 for(i = 0;i < points.length;i++){
@@ -61,10 +57,9 @@ for(i = 0;i < points.length;i++){
         var pointIndex = this.getAttribute('data-index')
         index = pointIndex;
         goIndex();
-        time = 0;//计时器跳转清零
+        time = 0;
     })
 }
-//计时器
 var timer;
 function play(){
  timer = setInterval(() => {
@@ -76,11 +71,9 @@ function play(){
 },100)
 }
 play();
-//移入清除计时器
 all.onmousemove = function(){
     clearInterval(timer)
 }
-//移出启动计时器
 all.onmouseleave = function(){
     play();
 }
